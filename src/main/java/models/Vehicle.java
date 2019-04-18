@@ -14,7 +14,7 @@ public class Vehicle {
 
     String vehicleName;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     Route routeId;
 
     boolean isActive;

@@ -11,7 +11,7 @@ public class Booking {
 
     int cost;
     @OneToOne(cascade = CascadeType.ALL)
-    Client clientId;
+    User userId;
     @OneToOne(cascade = CascadeType.ALL)
     Vehicle vehicleId;
     @OneToOne(cascade = CascadeType.ALL)
@@ -35,12 +35,12 @@ public class Booking {
         this.cost = cost;
     }
 
-    public Client getClientId() {
-        return clientId;
+    public User getClientId() {
+        return userId;
     }
 
-    public void setClientId(Client clientId) {
-        this.clientId = clientId;
+    public void setClientId(User userId) {
+        this.userId = userId;
     }
 
     public Vehicle getVehicleId() {

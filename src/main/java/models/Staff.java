@@ -8,7 +8,6 @@ public class Staff {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
-    String name;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     VehicleType vehicleTypeId;
@@ -22,14 +21,6 @@ public class Staff {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public VehicleType getVehicleTypeId() {
